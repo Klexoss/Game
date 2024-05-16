@@ -41,18 +41,24 @@ document.getElementById('paper').addEventListener('click', () => game('Img2.png'
 document.getElementById('scissors').addEventListener('click', () => game('Img3.png'));
 
 function game(playerChoice) {
-  var computerChoice = getFinalComputerChoice();
-  const result = getWinner(playerChoice, computerChoice);
+  // Start the "rolling" animation
+  getComputerChoice();
 
-  var resultText = document.querySelector('h1');
+  // Wait for a short delay, then stop the animation and make the final choice
+  setTimeout(function() {
+    var computerChoice = getFinalComputerChoice();
+    const result = getWinner(playerChoice, computerChoice);
 
-  if (result === 'You win!') {
-    resultText.className = 'win';
-  } else if (result === 'You Lose Fool!!') {
-    resultText.className = 'lose';
-  } else {
-    resultText.className = 'tie';
-  }
+    var resultText = document.querySelector('h1');
 
-  resultText.innerHTML = result;
+    if (result === 'You win!') {
+      resultText.className = 'win';
+    } else if (result === 'You Lose Fool!!') {
+      resultText.className = 'lose';
+    } else {
+      resultText.className = 'tie';
+    }
+
+    resultText.innerHTML = result;
+  }, 2000);  // Adjust this value to change the length of the delay
 }
