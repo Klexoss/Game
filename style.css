@@ -7,18 +7,22 @@ background: linear-gradient(90deg, rgba(62,58,180,1) 5%, rgba(65,190,189,1) 49%,
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f4f4f4; /* Adding a light background color */
+  
 }
 
 .container {
   display: flex;
-  justify-content: space-between;
-  max-width: 960px; /* Limiting the width of the container */
-  margin: 0 auto; /* Centering the container */
-  padding: 40px; /* Adding some padding */
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: normal;
+  align-content: normal;
+  
 }
 
-
+.container2, .container3, .container4 {
+  margin: 0 50px; /* This adds 25px of space to the left and right of each container */
+}
 
 
 h1 {
