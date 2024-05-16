@@ -1,0 +1,72 @@
+body {
+  background: rgb(62,58,180);
+background: linear-gradient(90deg, rgba(62,58,180,1) 5%, rgba(65,190,189,1) 49%, rgba(252,69,196,1) 93%);
+
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f4f4; /* Adding a light background color */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 960px; /* Limiting the width of the container */
+  margin: 0 auto; /* Centering the container */
+  padding: 40px; /* Adding some padding */
+}
+
+
+
+
+h1 {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 3.5rem;
+  color: hsl(0, 0%, 20%);
+  text-align: center; /* Centering the text */
+  transition: color 1s;
+}
+
+h1.win {
+  color: green;
+}
+
+h1.lose {
+  color: red;
+}
+
+h1.tie {
+  color: orange;
+}
+
+.container2, .container4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 45%;
+}
+
+.container3 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+img {
+  width: 150px; /* Setting a fixed width */
+  height: 150px; /* Setting a fixed height */
+  object-fit: contain; /* Making sure the image fits in the given dimensions */
+}
+
+.vs {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
